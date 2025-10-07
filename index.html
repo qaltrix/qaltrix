@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qaltrix - Innovative Digital Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Slate 950 - Deeper Dark */
+            color: #E2E8F0; /* Slate 200 */
+        }
+        .accent-gradient-text {
+            background: linear-gradient(to right, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent-gradient-bg {
+            background: linear-gradient(to right, #38BDF8, #818CF8);
+        }
+        .navbar {
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .navbar-scrolled {
+            background-color: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #1e293b; /* Slate 800 border */
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.1);
+            border-color: #38BDF8;
+        }
+        /* Glassmorphism effect for cards */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.5); /* Slate 900 with opacity */
+            backdrop-filter: blur(8px);
+        }
+        /* Animated background blob */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .blob-animation {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(180deg, rgba(56, 189, 248, 0.1), rgba(129, 140, 248, 0.15));
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: rotate 20s infinite linear;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="navbar fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-white">Qaltrix<span class="accent-gradient-text">.</span></a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#expertise" class="text-slate-300 hover:text-white font-medium transition duration-300">Expertise</a>
+                <a href="#projects" class="text-slate-300 hover:text-white font-medium transition duration-300">Projects</a>
+                <a href="#about" class="text-slate-300 hover:text-white font-medium transition duration-300">About</a>
+                <a href="#contact" class="accent-gradient-bg text-white px-5 py-2 rounded-md hover:opacity-90 transition duration-300 font-semibold">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-feather="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-700">
+            <a href="#expertise" class="block py-3 px-6 text-slate-300 hover:bg-slate-800">Expertise</a>
+            <a href="#projects" class="block py-3 px-6 text-slate-300 hover:bg-slate-800">Projects</a>
+            <a href="#about" class="block py-3 px-6 text-slate-300 hover:bg-slate-800">About</a>
+            <div class="px-6 py-4">
+                 <a href="#contact" class="block w-full text-center accent-gradient-bg text-white px-4 py-3 rounded-md hover:opacity-90 transition duration-300 font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-28 md:pt-20 relative overflow-hidden">
+        <div class="blob-animation top-0 -left-1/4"></div>
+        <div class="blob-animation bottom-0 -right-1/4"></div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Left Column (Text) -->
+                <div class="md:w-3/5 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        We Engineer <span class="accent-gradient-text">Digital Products</span> That Define Tomorrow.
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-xl mx-auto md:mx-0">
+                        From immersive games to scalable web platforms and intuitive mobile apps, Qaltrix transforms ambitious ideas into market-leading realities.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-6">
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-white transition duration-300">
+                            <i data-feather="linkedin" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://www.instagram.com/qaltrix.in/" target="_blank" class="text-slate-400 hover:text-white transition duration-300">
+                            <i data-feather="instagram" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://x.com/Qaltrix" target="_blank" class="text-slate-400 hover:text-white transition duration-300">
+                             <svg viewBox="0 0 24 24" aria-hidden="true" class="w-8 h-8" fill="currentColor"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+                        </a>
+                        <a href="https://github.com/qaltrix" target="_blank" class="text-slate-400 hover:text-white transition duration-300">
+                            <i data-feather="github" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- Right Column (Graphic - Placeholder) -->
+                <div class="hidden md:block md:w-2/5 mt-12 md:mt-0">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="w-80 h-80 relative">
+                            <div class="absolute inset-0 bg-slate-800 rounded-2xl transform -rotate-12"></div>
+                             <div class="absolute inset-0 accent-gradient-bg rounded-2xl transform rotate-12 flex items-center justify-center text-white">
+                                <i data-feather="box" class="w-32 h-32 opacity-50"></i>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">What We Build</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">We specialize in turning complex requirements into seamless digital experiences across three core areas.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- App Development -->
+                <div class="card-hover-effect glass-card rounded-lg p-8 text-center">
+                    <i data-feather="smartphone" class="w-10 h-10 accent-gradient-text mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Mobile Applications</h3>
+                    <p class="text-slate-400">Intuitive and powerful iOS & Android apps that capture user attention and deliver business value.</p>
+                </div>
+                <!-- Website Development -->
+                <div class="card-hover-effect glass-card rounded-lg p-8 text-center">
+                    <i data-feather="globe" class="w-10 h-10 accent-gradient-text mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Web Platforms</h3>
+                    <p class="text-slate-400">Scalable, high-performance websites and web applications built with cutting-edge technology.</p>
+                </div>
+                <!-- Game Development -->
+                <div class="card-hover-effect glass-card rounded-lg p-8 text-center">
+                    <i data-feather="target" class="w-10 h-10 accent-gradient-text mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Game Experiences</h3>
+                    <p class="text-slate-400">Engaging and immersive games for mobile and web that delight players and build communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Featured Project</h2>
+                 <p class="text-slate-400 max-w-2xl mx-auto">See how we transformed a critical need into a life-saving digital tool.</p>
+            </div>
+            <div class="card-hover-effect glass-card rounded-lg overflow-hidden md:flex">
+                <div class="md:w-1/2">
+                     <img src="https://res.cloudinary.com/dl0kcbeyv/image/upload/v1759845785/unnamed_3_fx2yun.png" alt="QConnect App" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold text-white mb-3">QConnect Emergency App</h3>
+                    <p class="text-slate-300 mb-6">A comprehensive mobile solution for emergency response, featuring crime reporting, SOS alerts, and a vital helpline directory to enhance public safety in Kerala.</p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-slate-700 text-xs text-sky-300 px-3 py-1 rounded-full font-medium">Flutter</span>
+                        <span class="bg-slate-700 text-xs text-sky-300 px-3 py-1 rounded-full font-medium">AI Integration</span>
+                        <span class="bg-slate-700 text-xs text-sky-300 px-3 py-1 rounded-full font-medium">Firebase</span>
+                    </div>
+                    <a href="#" class="accent-gradient-text font-semibold hover:underline text-lg">View Case Study &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-3xl font-bold text-white mb-6">About Qaltrix</h2>
+            <p class="text-lg text-slate-300">
+                Qaltrix is a forward-thinking technology partner dedicated to building high-quality digital products. Our team of expert developers, designers, and strategists collaborates to turn complex challenges into elegant solutions. We are passionate about technology and committed to our clients' success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Let's Build Together</h2>
+                <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Have a project in mind or just want to learn more? We'd love to hear from you.</p>
+            </div>
+            <form class="max-w-xl mx-auto card-hover-effect glass-card rounded-lg p-8">
+                <div class="mb-4">
+                    <label for="name" class="block text-slate-300 mb-2 font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-slate-800 border border-slate-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-slate-300 mb-2 font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-slate-800 border border-slate-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-slate-300 mb-2 font-medium">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full bg-slate-800 border border-slate-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="accent-gradient-bg text-white font-bold px-10 py-4 rounded-md hover:opacity-90 transition duration-300 w-full">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-8">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" target="_blank" class="text-slate-400 hover:text-white transition duration-300"><i data-feather="linkedin"></i></a>
+                 <a href="https://www.instagram.com/qaltrix.in/" target="_blank" class="text-slate-400 hover:text-white transition duration-300"><i data-feather="instagram" class="w-6 h-6"></i></a>
+                 <a href="https://x.com/Qaltrix" target="_blank" class="text-slate-400 hover:text-white transition duration-300"><svg viewBox="0 0 24 24" aria-hidden="true" class="w-6 h-6" fill="currentColor"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg></a>
+                <a href="https://github.com/qaltrix" target="_blank" class="text-slate-400 hover:text-white transition duration-300"><i data-feather="github"></i></a>
+            </div>
+            <p>&copy; 2025 Qaltrix. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
